@@ -1,0 +1,19 @@
+src/
+ ├─ components/
+ │  ├─ Navbar.jsx
+ │  ├─ Footer.jsx
+ │  ├─ PageWrapper.jsx
+ │  ├─ CourseCard.jsx
+ │  ├─ CoachCard.jsx
+ │  ├─ AchievementCard.jsx
+ │  ├─ TestimonialCard.jsx
+ │  └─ Lightbox.jsx
+ ├─ pages/
+ │  ├─ Home.jsx
+ │  ├─ Courses.jsx
+ │  ├─ Tournaments.jsx
+ │  ├─ Gallery.jsx
+ │  ├─ About.jsx
+ │  └─ Contact.jsx
+ ├─ App.jsx
+ └─ index.css (Tailwind + base styles)
