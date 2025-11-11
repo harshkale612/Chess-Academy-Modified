@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { FaInstagram, FaYoutube, FaFacebookF, FaTwitter } from "react-icons/fa";
 import { GiChessKing } from "react-icons/gi";
 
 export default function Footer() {
@@ -113,21 +112,14 @@ export default function Footer() {
 
         {/* Social + Copyright */}
         <div className="mt-10 border-t border-gray-200 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          {/* Social Icons */}
-          <div className="flex gap-5 text-gray-600">
-            {[FaInstagram, FaYoutube, FaFacebookF, FaTwitter].map(
-              (Icon, index) => (
-                <motion.a
-                  key={index}
-                  whileHover={{ scale: 1.2 }}
-                  className="hover:text-yellow-600 transition cursor-pointer"
-                  href="#"
-                >
-                  <Icon size={19} />
-                </motion.a>
-              )
-            )}
-          </div>
+          {/* Social Icon */}
+          <motion.a
+            whileHover={{ scale: 1.1 }}
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-100 text-lg font-bold text-orange-500 shadow-sm transition hover:text-orange-600"
+            href="https://www.instagram.com/uinsports_official?igsh=MWlyd25mdDExcTduMg%3D%3D&utm_source=qr"
+          >
+            U
+          </motion.a>
 
           {/* Powered By */}
           <p className="text-gray-500 text-sm text-center">
