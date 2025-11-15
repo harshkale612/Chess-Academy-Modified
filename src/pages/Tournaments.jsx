@@ -1,29 +1,38 @@
 import { motion } from "framer-motion";
-import { FaTrophy, FaMedal, FaChessKnight } from "react-icons/fa";
+import { FaTrophy, FaMedal, FaChessKnight, FaMapMarkerAlt, FaRupeeSign, FaUsers, FaBirthdayCake, FaChess } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 export default function Tournaments() {
   const upcoming = [
     {
-      title: "Winter Rapid Championship",
-      date: "January 15, 2025",
-      mode: "Rapid · 10+5",
+      title: "Golden Gate Tournament",
+      category: "Chess",
+      price: "INR 300",
+      ageRange: "10 to 50",
+      size: 20,
+      location: "Pune",
       image:
         "https://images.unsplash.com/photo-1543756070-dd3109556b0e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fENoZXNzJTIwQ2hhbXBpb25zaGlwfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500",
-      alt: "Players seated in a rapid chess tournament hall",
+      alt: "Chess pieces and board close-up",
     },
     {
       title: "Junior Blitz Cup",
-      date: "February 02, 2025",
-      mode: "Blitz · 5+3",
+      category: "Chess",
+      price: "INR 200",
+      ageRange: "8 to 18",
+      size: 30,
+      location: "Mumbai",
       image:
         "https://images.unsplash.com/photo-1697753594579-67cf2c2a88d9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fENoZXNzJTIwQ2hhbXBpb25zaGlwfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500",
       alt: "Young players competing in a blitz chess match",
     },
     {
       title: "Open Classical League",
-      date: "March 12, 2025",
-      mode: "Classical · 60+10",
+      category: "Chess",
+      price: "INR 500",
+      ageRange: "12 to 60",
+      size: 40,
+      location: "Delhi",
       image:
         "https://images.unsplash.com/photo-1739416333363-4b01dd9874c0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fENoZXNzJTIwQ2hhbXBpb25zaGlwfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500",
       alt: "Classical chess boards set for a league match",
@@ -111,7 +120,8 @@ export default function Tournaments() {
         </p>
       </motion.div>
 
-      {/* Upcoming Tournaments */}
+      {/* Upcoming Tournaments */
+      }
       <section className="max-w-7xl mx-auto px-5 mb-16">
         <h2 className="text-3xl font-bold mb-4 text-center">Upcoming Events</h2>
         <p className="text-gray-600 text-center max-w-3xl mx-auto mb-10">
@@ -132,18 +142,43 @@ export default function Tournaments() {
                 alt={t.alt}
                 className="h-56 w-full object-cover"
               />
-              <div className="p-6 space-y-3">
-                <h3 className="text-xl font-bold">{t.title}</h3>
-                <div className="flex items-center justify-between text-sm text-gray-600">
-                  <span>📅 {t.date}</span>
-                  <span>⌛ {t.mode}</span>
+              <div className="p-6 space-y-4">
+                <div className="flex items-center gap-2">
+                  <FaChess className="text-yellow-600 text-xl" />
+                  <h3 className="text-xl font-bold">{t.title}</h3>
                 </div>
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center justify-center px-4 py-2 bg-yellow-600 text-white text-sm rounded-lg font-semibold hover:bg-yellow-500 transition"
-                >
-                  Register Now
-                </Link>
+
+                <div className="flex flex-wrap gap-3 text-sm">
+                  <span className="px-3 py-1 rounded-full bg-yellow-50 text-yellow-700 border border-yellow-200 inline-flex items-center gap-2">
+                    <FaChess /> {t.category}
+                  </span>
+                  <span className="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 inline-flex items-center gap-2">
+                    <FaRupeeSign /> {t.price}
+                  </span>
+                  <span className="px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 border border-indigo-200 inline-flex items-center gap-2">
+                    <FaBirthdayCake /> Age: {t.ageRange}
+                  </span>
+                </div>
+
+                <div className="grid grid-cols-2 gap-4 text-sm text-gray-700">
+                  <div className="flex items-center gap-2">
+                    <FaUsers className="text-gray-500" />
+                    <span>Size: {t.size}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <FaMapMarkerAlt className="text-red-500" />
+                    <span>{t.location}</span>
+                  </div>
+                </div>
+
+                <div className="pt-2">
+                  <Link
+                    to="/contact"
+                    className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-yellow-600 text-white text-sm rounded-lg font-semibold hover:bg-yellow-500 transition shadow-sm"
+                  >
+                    View Slots
+                  </Link>
+                </div>
               </div>
             </motion.div>
           ))}

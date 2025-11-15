@@ -123,7 +123,7 @@ export default function Footer() {
 
           {/* Powered By */}
           <p className="text-gray-500 text-sm text-center">
-            Powered by <span className="font-semibold text-gray-700">YIS</span>
+            Powered by <span className="font-semibold text-gray-700">youinsports</span>
           </p>
 
           <p className="text-gray-500 text-sm text-center md:text-right">
