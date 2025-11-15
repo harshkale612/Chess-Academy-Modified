@@ -94,15 +94,15 @@ export default function Footer() {
             <p className="text-gray-600 text-sm mb-3">
               Subscribe for tournament updates & free chess tips
             </p>
-            <form className="flex gap-2">
+            <form className="flex gap-2 w-full flex-col sm:flex-row">
               <input
                 type="email"
                 placeholder="Your email"
-                className="flex-1 px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-yellow-400 outline-none text-sm"
+                className="flex-1 min-w-0 px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-yellow-400 outline-none text-sm"
               />
               <button
                 type="submit"
-                className="px-4 py-2 bg-yellow-600 text-white rounded-lg font-semibold hover:bg-yellow-500 transition text-sm"
+                className="px-4 py-2 bg-yellow-600 text-white rounded-lg font-semibold hover:bg-yellow-500 transition text-sm w-full sm:w-auto"
               >
                 Subscribe
               </button>
